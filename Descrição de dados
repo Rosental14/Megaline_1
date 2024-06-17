@@ -1,5 +1,6 @@
 Descrição de dados
-Cada observação no conjunto de dados contém informações comportamentais mensais sobre um usuário. As informações dadas são as seguintes:
+Cada observação no conjunto de dados contém informações comportamentais mensais sobre um usuário. 
+As informações dadas são as seguintes:
 
 сalls — número de chamadas
 minutes — duração total da chamada em minutos
