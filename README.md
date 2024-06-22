@@ -1,6 +1,97 @@
-# Megaline
-A operadora de celular Megaline está insatisfeita com o fato de muitos de seus clientes estarem usando planos antigos. A empresa quer desenvolver um modelo que possa analisar o comportamento do cliente e recomendar um dos planos mais recentes da Megaline: Smart ou Ultra.
+# Modelo de Recomendação de Planos da Megaline
 
-Temos acesso aos dados de comportamento dos clientes que já mudaram para os novos planos. Para essa tarefa de classificação, iremos desenvolver um modelo que escolhe o plano certo. Como os dados já passaram pela etapa de pré-processamento de dados, iremos direto para etapa da criação do modelo.
+## Descrição
+Este projeto faz parte do curso de Ciência de Dados da TripleTen e envolve a criação de um modelo de classificação para a operadora de celular Megaline. 
+O objetivo é analisar o comportamento dos clientes e recomendar um dos planos mais recentes: **Smart ou Ultra**, utilizando dados comportamentais de clientes que já migraram para os novos planos. O modelo deve alcançar uma acurácia mínima de 0,75.  
 
-Iremos desenvolver um modelo com a maior acurácia possível, verificando-a com o conjunto de dados de teste. Neste projeto, o limite para acurácia é 0.75
+## Instalação
+**Pré-requisitos**
+* **Python 3.x:** (Qualquer versão do Python 3, como 3.6, 3.7, 3.8, etc.)
+* **Bibliotecas Python:**
+    * pandas
+    * numpy
+    * scikit-learn
+    * matplotlib
+    * seaborn
+
+**Instruções de Instalação**
+1.	**Clone o repositório:** git clone https://github.com/Rosental14/Megaline_1.git
+2.	**Navegue até o diretório do projeto:** cd projeto_megaline_1.ipynb
+3.	**Instale as dependências:** pip install -r requirements.txt
+
+## Uso
+1.	Abra o Jupyter Notebook
+2.	Navegue até o arquivo projeto_megaline_1.ipynb e abra-o.
+3.	Execute as células sequencialmente para reproduzir a análise e a criação do modelo.
+
+## Funcionalidades  
+
+### Etapas Iniciais
+* **Importação de Bibliotecas:** pandas, numpy, scikit-learn, matplotlib e seaborn.  
+<br>
+
+* **Leitura dos Dados:** Carregamento do arquivo users_behavior.csv 
+<br>
+
+* **Informações Gerais:** Impressão das informações gerais do DataFrame para conferir tipos de dados e valores ausentes.  
+<br>
+
+### Divisão dos Dados
+* **Divisão em Conjuntos:** Divisão dos dados em conjuntos de treinamento, validação e teste na proporção 80:10:10.
+<br>
+  
+* **Características e Alvo:** Definição das colunas de características e do alvo.
+<br>
+
+### Estudo do Melhor Modelo
+* **Modelos Testados:** Avaliação de três modelos de classificação: Árvore de Decisão, Floresta Aleatória e Regressão Logística.
+<br>
+
+* **Métricas de Avaliação:** Utilização da acurácia como métrica principal e consideração do tempo de execução dos modelos.
+<br>
+
+#### Árvore de Decisão
+* **Hiperparâmetros:** Teste de diferentes valores para criterion, min_samples_leaf e max_depth.
+<br>
+
+* **Melhor Modelo:** Acurácia de 83.18% com max_depth=10, criterion='gini' e min_samples_leaf=7.
+<br>
+
+* **Tempo de Execução:** Aproximadamente 2.31 segundos.
+<br>
+
+#### Floresta Aleatória
+* **Hiperparâmetros:** Teste de diferentes valores para bootstrap, max_depth e n_estimators.
+<br>
+
+* **Melhor Modelo:** Acurácia de 83.18% com max_depth=1, bootstrap=False e n_estimators=9.
+<br>
+
+* **Tempo de Execução:** Aproximadamente 7.67 segundos.
+<br>
+
+#### Regressão Logística
+* **Modelo:** Utilização de solver='liblinear' e random_state=14.
+<br>
+
+* **Acurácia:** 71.34%.
+<br>
+
+* **Tempo de Execução:** Aproximadamente 0.01 segundos.
+<br>
+
+### Teste do Melhor Modelo
+* **Treinamento Completo:** Treinamento do melhor modelo (Árvore de Decisão) com todos os dados disponíveis.
+<br>
+
+* **Acurácia no Conjunto de Teste:** 84.47%.
+<br>
+
+### Prova Real do Modelo
+* **Comparação com Dados Aleatórios:** Acurácia de 84.5% com dados reais e aproximadamente 50% com dados aleatórios, comprovando a eficiência do modelo.
+
+## Créditos
+* **Autor:** Renan Rosental
+
+## Contato
+Para dúvidas e feedback, entre em contato via e-mail: renan.engal@gmail.com
