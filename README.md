@@ -17,7 +17,7 @@ O objetivo é analisar o comportamento dos clientes e recomendar um dos planos m
 
 **Instruções de Instalação**
 1.	**Clone o repositório:** git clone https://github.com/Rosental14/Megaline_1.git
-2.	**Navegue até o diretório do projeto:** cd projeto_megaline_1.ipynb
+2.	**Navegue até o diretório do projeto:**
 3.	**Instale as dependências:** pip install -r requirements.txt
 <br>
 
